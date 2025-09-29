@@ -5,6 +5,7 @@ body {
     padding: 0;
     color: #333;
     scroll-behavior: smooth;
+    background: #f9f9f9;
 }
 
 a {
@@ -25,6 +26,11 @@ nav {
     z-index: 1000;
 }
 
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
 .nav-links li {
     display: inline-block;
     margin-left: 25px;
@@ -36,31 +42,39 @@ nav {
 
 /* Hero */
 #hero {
-    background: linear-gradient(120deg, #89f7fe, #66a6ff);
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
     color: #fff;
     height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 0 20px;
 }
 
 #hero h1 {
     font-size: 3rem;
     margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
 }
 
 .btn {
-    background: #1a1a1a;
+    background: #ff6347;
     color: #fff;
-    padding: 10px 25px;
+    padding: 12px 30px;
     border-radius: 5px;
     font-weight: bold;
     transition: 0.3s;
 }
 
 .btn:hover {
-    background: #ff6347;
+    background: #1a1a1a;
+    color: #fff;
 }
 
 /* Section */
@@ -73,6 +87,17 @@ nav {
 h2 {
     text-align: center;
     margin-bottom: 50px;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #ff6347;
+    margin: 10px auto 0;
+    border-radius: 2px;
 }
 
 /* Skills */
@@ -81,13 +106,32 @@ h2 {
     background: #e0e0e0;
     padding: 7px 15px;
     margin: 5px;
-    border-radius: 5px;
+    border-radius: 25px;
     transition: 0.3s;
 }
 
 .skills-container span:hover {
     background: #ff6347;
     color: #fff;
+    transform: scale(1.1);
+}
+
+/* Experience */
+.experience-item {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-left: 4px solid #ff6347;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.experience-item h3 {
+    margin-bottom: 5px;
+}
+
+.experience-item ul {
+    margin: 10px 0 0 20px;
 }
 
 /* Projects */
@@ -98,25 +142,37 @@ h2 {
 }
 
 .project-card {
-    background: #f4f4f4;
+    background: #fff;
     padding: 20px;
     border-radius: 10px;
     transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 .project-card a {
     display: inline-block;
     margin-top: 10px;
     color: #1a1a1a;
+    font-weight: bold;
 }
 
 .project-card a:hover {
     color: #ff6347;
+}
+
+/* Education */
+.edu-item {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 4px solid #ff6347;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 /* Contact */
@@ -130,7 +186,7 @@ h2 {
 .contact-links a {
     background: #1a1a1a;
     color: #fff;
-    padding: 10px 20px;
+    padding: 12px 25px;
     border-radius: 5px;
     transition: 0.3s;
 }
